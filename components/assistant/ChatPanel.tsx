@@ -1,5 +1,5 @@
 import { useAssistant } from '../../context/AssistantContext';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 export default function ChatPanel() {
@@ -16,7 +16,7 @@ export default function ChatPanel() {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
+        <m.div
           className="fixed right-4 bottom-20 w-full max-w-md h-[70vh] bg-white shadow-2xl rounded-2xl border border-gray-200 flex flex-col z-50 overflow-hidden"
           initial={{ opacity: 0, y: 20, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -46,7 +46,7 @@ export default function ChatPanel() {
             />
             <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-orange-500">Enviar</button>
           </form>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );
