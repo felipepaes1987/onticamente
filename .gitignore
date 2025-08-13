@@ -1,0 +1,17 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-*.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+.vercel/
+.env
+.env.*
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/

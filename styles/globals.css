@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F3F4F6;
+  color: #1F2937;
+}
+
+
+
+
+/* Página A4 real com blocos */
+.pagina-a4 {
+  width: 794px;
+  height: 1123px;
+  background: white;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Blocos */
+.bloco-texto {
+  width: 300px;
+  min-height: 60px;
+  background: #f9fafb;
+  border: 1px dashed #ccc;
+  padding: 8px;
+  font-size: 16px;
+  position: absolute;
+  z-index: 10;
+}
+
+.bloco-forma {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  z-index: 5;
+  opacity: 0.9;
+}
+
+.bloco-forma.retangulo {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+.bloco-forma.circulo {
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.bloco-forma.seta {
+  width: 60px;
+  height: 10px;
+  background-color: #facc15;
+  position: absolute;
+}
+.bloco-forma.seta::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #facc15;
+}
+
+
+/* Alça de redimensionamento */
+.resize-handle {
+  width: 10px;
+  height: 10px;
+  background: #666;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+  z-index: 20;
+}
+
+
+/* Página A4 com margens internas e limites visuais */
+.pagina-a4 {
+  background: white;
+  width: 794px;
+  min-height: 1123px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Formas e imagens limitadas visualmente */
+.bloco-forma {
+  width: 100px;
+  height: 100px;
+  background: #cce5ff;
+  border: 2px solid #3399ff;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Mostrar seleção com borda quando clicado */
+.bloco-forma.selected {
+  outline: 2px dashed #007bff;
+}
+
+/* Alças de redimensionamento em todos os cantos */
+.bloco-forma .resize-handle {
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  position: absolute;
+  z-index: 20;
+}
+
+.bloco-forma .resize-handle.tl { top: -5px; left: -5px; cursor: nwse-resize; }
+.bloco-forma .resize-handle.tr { top: -5px; right: -5px; cursor: nesw-resize; }
+.bloco-forma .resize-handle.bl { bottom: -5px; left: -5px; cursor: nesw-resize; }
+.bloco-forma .resize-handle.br { bottom: -5px; right: -5px; cursor: nwse-resize; }
+
+/* Corrigir layout geral: rolagem isolada */
+main {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main > div:last-child {
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+/* Botão padrão (fallback se não existir) */
+.botao-padrao {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease;
+}
+.botao-padrao:hover { background: #1e40af; }
