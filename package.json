@@ -8,28 +8,32 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "tailwindcss": "3.4.10",
-    "@supabase/supabase-js": "2.44.1",
     "@supabase/ssr": "0.5.1",
-    "lucide-react": "0.427.0",
-    "framer-motion": "11.2.12",
+    "@supabase/supabase-js": "2.44.1",
+    "@tiptap/extension-color": "^2.6.6",
+    "@tiptap/extension-font-family": "^2.6.6",
+    "@tiptap/extension-text-align": "^2.6.6",
+    "@tiptap/extension-text-style": "^2.6.6",
     "@tiptap/react": "^2.6.6",
     "@tiptap/starter-kit": "^2.6.6",
-    "@tiptap/extension-text-align": "^2.6.6",
+    "framer-motion": "11.2.12",
+    "konva": "^9.3.14",
+    "lucide-react": "0.427.0",
+    "next": "14.2.5",
     "pagedjs": "^0.4.3",
     "perfect-freehand": "^1.2.0",
-    "@tiptap/extension-text-style": "^2.6.6",
-    "@tiptap/extension-color": "^2.6.6",
-    "konva": "^9.3.14",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-konva": "^18.2.10",
-    "@tiptap/extension-font-family": "^2.6.6"
+    "tailwindcss": "3.4.10"
   },
   "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
     "autoprefixer": "10.4.16",
-    "postcss": "8.4.31"
+    "postcss": "8.4.31",
+    "typescript": "^5.9.2"
   },
   "engines": {
     "node": ">=18.0.0"
